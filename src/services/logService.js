@@ -91,9 +91,12 @@ class LogService {
         for(let i = 0 ; i < log.length; i++){
             totalPlastic += parseInt(log[i].plasticDiscarded)
             totalMetal+= parseInt(log[i].metalDiscarded)
+            console.log("log de id: "+ log[i]._id)
             totalPoints += parseInt(log[i].points)
+            console.log(totalMetal)
         }
         totalDiscarded = totalPlastic + totalMetal
+        console.log(totalMetal)
         const response = {
             "discardedPlastic": totalPlastic,
             "discardedMetal": totalMetal,

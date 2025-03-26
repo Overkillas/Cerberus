@@ -5,13 +5,13 @@ import { verifyJWT } from "../src/middlewares/jwtConfig.js";
 const routes = express.Router();
 
 routes.get("/log", logController.getTrash)
-routes.post("/log", verifyJWT , logController.create)
-routes.get("/log/:userId", verifyJWT, logController.list)
-routes.get("/log/redeemed/:userId", verifyJWT, logController.listByRedeemed)
-routes.get("/log/not/redeemed/:userId", verifyJWT, logController.listByNotRedeemed)
-routes.get("/log/code/:code", verifyJWT, logController.listByCode)
-routes.put("/log/:id", verifyJWT, logController.update)
-routes.put("/log/:token", verifyJWT, logController.update)
+routes.post("/log", logController.create)
+routes.get("/log/:userId", logController.list)
+routes.get("/log/redeemed/:userId", logController.listByRedeemed)
+routes.get("/log/not/redeemed/:userId", logController.listByNotRedeemed)
+routes.get("/log/code/:code", logController.listByCode)
+routes.put("/log/:id", logController.update)
+routes.put("/log/:token", logController.update)
 
 
 export default routes;
