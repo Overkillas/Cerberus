@@ -5,7 +5,7 @@ const jwtController = {
         const token = jwt.sign({ id }, process.env.SECRET, {
             expiresIn: "24h"
         });
-        return token
+        return token;
     }
 }
 
@@ -24,4 +24,4 @@ const verifyJWT = (req, res, next) => {
 };
 
 
-export { jwtController, verifyJWT }
+export { jwtController, verifyJWT };

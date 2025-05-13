@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema({
     img:
     {
         data: Buffer,
-        contentType: String
+        contentType: String,
     },
     isActive: {type: Boolean, default: true, required: false}
 }, {versionKey: false});
